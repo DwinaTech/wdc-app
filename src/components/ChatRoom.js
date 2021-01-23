@@ -3,25 +3,27 @@ import React, { useRef, useState } from "react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import MessageCard from "./MessageCard";
 
-const ChatRoom = () => {
+const ChatRoom = ({ currentRoom }) => {
   const customRef = useRef();
   const messagesRef = db.collection("messages");
-  const query = messagesRef.orderBy("createdAt").limit(25);
+  const query = messagesRef.where("room", "==", currentRoom);
+  // .orderBy("createdAt")
+  // .limit(2);
 
-  const [messages] = useCollectionData(query, { idField: "id" });
+  const [messages] = useCollectionData(query);
 
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+    const createdAt = firebaseRef.firestore.FieldValue.serverTimestamp();
     const { uid, photoURL } = auth.currentUser;
-
     await messagesRef.add({
-      text: message,
-      createdAt: firebaseRef.firestore.FieldValue.serverTimestamp(),
-      photoURL,
       uid,
+      photoURL,
+      createdAt,
+      text: message,
+      room: currentRoom,
     });
 
     setMessage("");
