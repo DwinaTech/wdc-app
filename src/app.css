@@ -1,7 +1,8 @@
 .app {
   max-width: 728px;
   margin: 0 auto;
-  background-color: #333333;
+  color: #e6e5e8;
+  background-color: #1c2025;
 }
 
 nav {
@@ -11,14 +12,14 @@ nav {
   width: 100%;
   display: flex;
   padding: 10px;
-  color: white;
   position: fixed;
   max-width: 728px;
   min-height: 50px;
   align-items: center;
   box-sizing: border-box;
-  background-color: #000000;
+  background-color: #24292e;
   justify-content: space-between;
+  box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.7), 0 3px 4px -2px rgba(0, 0, 0, 0.5);
 }
 
 .app .content {
@@ -62,7 +63,8 @@ textarea {
   padding: 0 10px;
   line-height: 1.5;
   font-size: 1.5rem;
-  background: #000000;
+  background-color: #1c2025;
+  border-top: 2px solid #242a2e;
 }
 
 button {
@@ -124,6 +126,7 @@ img {
   height: 40px;
   margin: 2px 5px;
   border-radius: 50%;
+  background-color: #ffffff;
 }
 
 /* =================== Login ===================== */
