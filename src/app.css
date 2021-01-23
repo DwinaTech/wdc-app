@@ -1,0 +1,155 @@
+.app {
+  max-width: 728px;
+  margin: 0 auto;
+  background-color: #333333;
+}
+
+nav {
+  top: 0;
+  z-index: 5;
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  color: white;
+  position: fixed;
+  max-width: 728px;
+  min-height: 50px;
+  align-items: center;
+  box-sizing: border-box;
+  background-color: #000000;
+  justify-content: space-between;
+}
+
+.app .content {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.messages {
+  height: 80vh;
+  padding: 10px;
+  display: flex;
+  overflow-y: scroll;
+  margin: 10vh 0 10vh;
+  flex-direction: column;
+}
+
+form {
+  bottom: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  position: fixed;
+  max-width: 728px;
+  font-size: 1.5rem;
+  background-color: rgb(24, 23, 23);
+}
+
+form button {
+  width: 20%;
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+textarea {
+  width: 100%;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 0 10px;
+  line-height: 1.5;
+  font-size: 1.5rem;
+  background: #000000;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #ffffff;
+  max-width: 110px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  background-color: #333333;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+ul,
+li {
+  text-align: left;
+  list-style: none;
+}
+
+p {
+  color: white;
+  max-width: 500px;
+  line-height: 24px;
+  padding: 10px 20px;
+  text-align: center;
+  position: relative;
+  border-radius: 25px;
+  margin-bottom: 12px;
+}
+
+.message {
+  display: flex;
+  align-items: center;
+}
+
+.sent {
+  flex-direction: row-reverse;
+}
+
+.sent p {
+  color: white;
+  align-self: flex-end;
+  background: #0b93f6;
+}
+.received p {
+  background: #e5e5ea;
+  color: black;
+}
+
+img {
+  width: 40px;
+  height: 40px;
+  margin: 2px 5px;
+  border-radius: 50%;
+}
+
+/* =================== Login ===================== */
+.login {
+  width: 400px;
+  height: 400px;
+  display: flex;
+  margin: 0 auto;
+  color: #ffffff;
+  align-items: center;
+  border-radius: 10px;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #000000;
+}
+
+.login button {
+  background-color: #ffffff;
+  color: #000000;
+  min-width: 190px;
+  padding: 10px 0;
+  border-radius: 99px;
+}
+/* =================== Logout ===================== */
+.logout {
+  font-size: 20px;
+  padding: 10px 15px;
+  border-radius: 99px;
+}
