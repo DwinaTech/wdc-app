@@ -98,7 +98,7 @@ form {
   display: flex;
   position: fixed;
   max-width: 900px;
-  font-size: 1.5rem;
+  font-size: 15px;
   background-color: rgb(24, 23, 23);
 }
 
@@ -115,7 +115,7 @@ textarea {
   color: white;
   padding: 0 10px;
   line-height: 1.5;
-  font-size: 1.5rem;
+  font-size: 15px;
   background-color: #1c2025;
   border-top: 2px solid #242a2e;
 }
@@ -157,27 +157,20 @@ p {
 }
 /* =================== Login ===================== */
 .login {
-  width: 400px;
-  height: 400px;
   display: flex;
-  margin: 0 auto;
-  color: #ffffff;
   align-items: center;
-  border-radius: 10px;
-  flex-direction: column;
   justify-content: center;
-  background-color: rgb(36, 42, 46, 0.9);
 }
 
 .login button {
-  background-color: #1c2125;
   color: #ffffff;
-  min-width: 210px;
+  min-width: 280px;
   padding: 15px 0;
-  font-size: 20px;
+  font-size: 35px;
   font-weight: bold;
   margin-top: 15px;
   border-radius: 99px;
+  background-color: rgb(28, 33, 37, 0.9);
 }
 /* =================== Logout ===================== */
 .logout {
@@ -215,4 +208,57 @@ p {
 .rooms ul li:hover,
 .rooms ul li.active {
   background-color: #242a2e;
+}
+
+/* =================== Spinner ===================== */
+
+.spinner {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+.spinner .circle {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: rgba(75, 71, 71, 0.9);
+  color: #ffffff;
+  border: 10px solid #242a2e;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 145px;
+}
+
+.spinner .circle > label {
+  font-size: 30px;
+}
+
+.spinner .circle::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: 150px;
+  height: 150px;
+  border: 10px solid transparent;
+  border-top: 10px solid #008080;
+  border-right: 10px solid #008080;
+  border-radius: 50%;
+  animation: animate 2s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
