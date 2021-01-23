@@ -4,7 +4,7 @@
 }
 
 .app {
-  max-width: 728px;
+  max-width: 900px;
   margin: 0 auto;
   color: #e6e5e8;
   background-size: cover;
@@ -15,13 +15,13 @@ button {
   border: none;
   outline: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 24px;
   color: #ffffff;
   max-width: 110px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  background-color: #333333;
+  background-color: #008080;
 }
 
 img {
@@ -29,7 +29,7 @@ img {
   height: 40px;
   margin: 2px 5px;
   border-radius: 50%;
-  background-color: #8a85ff;
+  background-color: #008080;
 }
 
 /* ================ NavBar ============== */
@@ -41,7 +41,7 @@ nav {
   display: flex;
   padding: 10px;
   position: fixed;
-  max-width: 728px;
+  max-width: 900px;
   min-height: 50px;
   align-items: center;
   box-sizing: border-box;
@@ -61,10 +61,6 @@ nav {
   box-sizing: border-box;
   transition: all 0.4s ease-in-out;
   background-color: rgb(128, 128, 128, 0.8);
-  -webkit-transition: all 0.4s ease-in-out;
-  -moz-transition: all 0.4s ease-in-out;
-  -ms-transition: all 0.4s ease-in-out;
-  -o-transition: all 0.4s ease-in-out;
 }
 
 .menu {
@@ -101,7 +97,7 @@ form {
   height: 10vh;
   display: flex;
   position: fixed;
-  max-width: 728px;
+  max-width: 900px;
   font-size: 1.5rem;
   background-color: rgb(24, 23, 23);
 }
@@ -186,7 +182,37 @@ p {
 /* =================== Logout ===================== */
 .logout {
   min-width: 100%;
-  font-size: 20px;
   padding: 10px 15px;
   border-radius: 99px;
+}
+
+/* =================== Rooms ===================== */
+.rooms {
+  min-width: 100%;
+  padding: 10px 15px;
+  border-radius: 20px;
+  margin-top: 15px;
+  box-sizing: border-box;
+  font-size: 24px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #008080;
+}
+
+.rooms ul {
+  font-size: 24px;
+  list-style: none;
+  text-align: center;
+}
+
+.rooms ul li {
+  margin-top: 5px;
+  cursor: pointer;
+  padding: 10px 0;
+  border-radius: 99px;
+}
+
+.rooms ul li:hover,
+.rooms ul li.active {
+  background-color: #242a2e;
 }
