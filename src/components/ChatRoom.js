@@ -11,7 +11,7 @@ const ChatRoom = ({ currentRoom }) => {
     .orderBy("createdAt")
     .limit(20);
 
-  const [messages] = useCollectionData(query);
+  const [messages] = useCollectionData(query, { idField: "id" });
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
@@ -30,12 +30,19 @@ const ChatRoom = ({ currentRoom }) => {
     customRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
+  const handleDelete = (createdAt, id) => {
+    db.collection("messages").doc(id).delete();
+  };
   return (
     <>
       <div className="messages">
         {messages &&
           messages.map((message) => (
-            <MessageCard key={message.createdAt} message={message} />
+            <MessageCard
+              message={message}
+              key={message.id}
+              handleDelete={handleDelete}
+            />
           ))}
         <span ref={customRef}></span>
       </div>

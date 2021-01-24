@@ -162,6 +162,12 @@ button:disabled {
   grid-column-end: 5;
 }
 
+.actions button {
+  background: red;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
 .sent {
   flex-direction: row-reverse;
 }
