@@ -11,6 +11,10 @@
   background-image: url("https://i.pinimg.com/originals/a1/ed/1a/a1ed1a9d7936141f9961ba5a9682f8fb.jpg");
 }
 
+p {
+  line-height: 24px;
+}
+
 button {
   border: none;
   outline: none;
@@ -124,34 +128,51 @@ button:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
-
-p {
-  color: white;
-  max-width: 500px;
-  line-height: 24px;
-  padding: 10px 20px;
-  text-align: center;
-  position: relative;
-  border-radius: 25px;
-  margin-bottom: 12px;
-}
-
+/* ================ Messages ============== */
 .message {
   display: flex;
   align-items: center;
+}
+
+.message .contents {
+  padding: 10px;
+  grid-gap: 10px;
+  display: grid;
+  max-width: 80%;
+  align-items: center;
+  margin-bottom: 10px;
+  border-radius: 10px 0 10px;
+  grid-template-columns: auto auto auto;
+}
+
+.message .contents .user-name {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.message .contents .photo {
+  grid-column-start: 4;
+  grid-column-end: 4;
+}
+
+.message .contents .text {
+  grid-column-start: 1;
+  grid-column-end: 5;
 }
 
 .sent {
   flex-direction: row-reverse;
 }
 
-.sent p {
+.sent .contents {
   color: white;
-  align-self: flex-end;
   background: #0b93f6;
 }
 
-.received p {
+.received .contents {
   background: #e5e5ea;
   color: black;
 }
@@ -260,5 +281,11 @@ p {
   }
   100% {
     transform: rotate(360deg);
+  }
+}
+
+@media (min-width: 600px) {
+  .message .contents {
+    max-width: 50%;
   }
 }

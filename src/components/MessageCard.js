@@ -8,11 +8,20 @@ const MessageCard = ({ message }) => {
   return (
     <>
       <div className={`message ${messageClass}`}>
-        <img
-          src={photoURL || `${process.env.PUBLIC_URL}/avatar.png`}
-          alt="avatar"
-        />
-        <p>{text}</p>
+        <div className="contents">
+          <div className="user-name">
+            <p>Mohammed Dwina</p>
+          </div>
+          <div className="photo">
+            <img
+              src={photoURL || `${process.env.PUBLIC_URL}/avatar.png`}
+              alt="avatar"
+            />
+          </div>
+          <div className="text">
+            <p>{text}</p>
+          </div>
+        </div>
       </div>
     </>
   );
