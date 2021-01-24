@@ -34,7 +34,7 @@ const NavBar = ({ user, currentRoom, setCurrentRoom }) => {
             style={{ top: showSideBar && user ? "10vh" : "-100vh" }}
           >
             <li>
-              <Logout />
+              <Logout setShowSideBar={setShowSideBar} />
             </li>
             <li>
               <Rooms
