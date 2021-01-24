@@ -6,12 +6,12 @@ import MessageCard from "./MessageCard";
 const ChatRoom = ({ currentRoom }) => {
   const customRef = useRef();
   const messagesRef = db.collection("messages");
-  const query = messagesRef.where("room", "==", currentRoom);
-  // .orderBy("createdAt")
-  // .limit(2);
+  const query = messagesRef
+    .where("room", "==", currentRoom)
+    .orderBy("createdAt")
+    .limit(20);
 
   const [messages] = useCollectionData(query);
-
   const [message, setMessage] = useState("");
 
   const handleSubmit = async (e) => {
