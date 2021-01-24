@@ -34,7 +34,9 @@ const ChatRoom = ({ currentRoom }) => {
     <>
       <div className="messages">
         {messages &&
-          messages.map((msg) => <MessageCard key={msg.id} message={msg} />)}
+          messages.map((message) => (
+            <MessageCard key={message.createdAt} message={message} />
+          ))}
         <span ref={customRef}></span>
       </div>
 
