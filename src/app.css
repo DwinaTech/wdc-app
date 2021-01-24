@@ -4,7 +4,7 @@
 }
 
 .app {
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   color: #e6e5e8;
   background-size: cover;
@@ -45,7 +45,7 @@ nav {
   display: flex;
   padding: 10px;
   position: fixed;
-  max-width: 900px;
+  max-width: 800px;
   min-height: 50px;
   align-items: center;
   box-sizing: border-box;
@@ -101,7 +101,7 @@ form {
   height: 10vh;
   display: flex;
   position: fixed;
-  max-width: 900px;
+  max-width: 800px;
   font-size: 15px;
   background-color: rgb(24, 23, 23);
 }
@@ -141,7 +141,6 @@ button:disabled {
   max-width: 80%;
   align-items: center;
   margin-bottom: 10px;
-  border-radius: 10px 0 10px;
   grid-template-columns: auto auto auto;
 }
 
@@ -170,11 +169,13 @@ button:disabled {
 .sent .contents {
   color: white;
   background: #0b93f6;
+  border-radius: 10px 0 10px;
 }
 
 .received .contents {
-  background: #e5e5ea;
   color: black;
+  background: #e5e5ea;
+  border-radius: 0 10px 0;
 }
 /* =================== Login ===================== */
 .login {
