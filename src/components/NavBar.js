@@ -30,7 +30,7 @@ const NavBar = ({ user, currentRoom, setCurrentRoom }) => {
             />
           </button>
           <ul
-            className="side-bar"
+            className="list-menu"
             style={{ top: showSideBar && user ? "10vh" : "-100vh" }}
           >
             <li>
