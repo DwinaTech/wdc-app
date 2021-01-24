@@ -1,9 +1,7 @@
-import React from "react";
-
-const Rooms = ({ currentRoom, setShowSideBar, setCurrentRoom }) => {
+const Rooms = ({ currentRoom, setShowListMenu, setCurrentRoom }) => {
   const handleRoomChange = (room) => {
     setCurrentRoom(room);
-    setShowSideBar(false);
+    setShowListMenu(false);
   };
   return (
     <div className="rooms">

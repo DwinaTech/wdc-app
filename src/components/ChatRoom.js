@@ -1,5 +1,5 @@
 import { db, auth, firebaseRef } from "../config";
-import React, { useRef, useState } from "react";
+import { useState, useRef } from "react";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import MessageCard from "./MessageCard";
 

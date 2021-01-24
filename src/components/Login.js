@@ -1,4 +1,3 @@
-import React from "react";
 import { auth, firebaseRef } from "../config";
 
 const Login = () => (

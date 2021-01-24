@@ -1,13 +1,12 @@
-import React from "react";
 import { auth } from "../config";
 
-const SignOut = ({ setShowSideBar }) =>
+const SignOut = ({ setShowListMenu }) =>
   auth.currentUser && (
     <button
       className="logout"
       onClick={() => {
         auth.signOut();
-        setShowSideBar(false);
+        setShowListMenu(false);
       }}
     >
       Sign Out
