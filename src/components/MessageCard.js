@@ -17,10 +17,7 @@ const MessageCard = ({ message, handleDelete }) => {
             <p>{userName}</p>
           </div>
           <div className="photo">
-            <img
-              src={photoURL || `${process.env.PUBLIC_URL}/avatar.png`}
-              alt="avatar"
-            />
+            <img src={photoURL} alt="avatar" />
           </div>
           <div className="text">
             <p>{text}</p>
