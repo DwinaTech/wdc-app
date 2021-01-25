@@ -1,5 +1,5 @@
-import { db, auth, firebaseRef } from "../config";
 import { useState, useRef } from "react";
+import { db, auth, firebaseRef } from "../config";
 import { useCollectionData } from "react-firebase-hooks/firestore";
 import MessageCard from "./MessageCard";
 
@@ -17,13 +17,14 @@ const ChatRoom = ({ currentRoom }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const createdAt = firebaseRef.firestore.FieldValue.serverTimestamp();
-    const { uid, photoURL } = auth.currentUser;
+    const { uid, photoURL, displayName } = auth.currentUser;
     await messagesRef.add({
       uid,
       photoURL,
       createdAt,
       text: message,
       room: currentRoom,
+      userName: displayName,
     });
 
     setMessage("");

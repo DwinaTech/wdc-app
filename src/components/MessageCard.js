@@ -2,8 +2,7 @@ import { useState } from "react";
 import { auth } from "../config";
 
 const MessageCard = ({ message, handleDelete }) => {
-  const { displayName } = auth.currentUser;
-  const { id, text, uid, createdAt, photoURL } = message;
+  const { id, text, uid, userName, createdAt, photoURL } = message;
   const messageClass = uid === auth.currentUser.uid ? "sent" : "received";
   const [showActionsButtons, setShowActionsButtons] = useState(false);
   const toggleCard = () => {
@@ -15,7 +14,7 @@ const MessageCard = ({ message, handleDelete }) => {
       <div className={`message ${messageClass}`}>
         <div className="contents" onClick={toggleCard}>
           <div className="user-name">
-            <p>{displayName}</p>
+            <p>{userName}</p>
           </div>
           <div className="photo">
             <img
