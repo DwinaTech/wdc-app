@@ -2,7 +2,7 @@
 
 It is a real time update chat App, create by using React.js (Hooks), Matrial-UI, Firebase, created for education and learning purpose.
 
-Demo: https://wdc-app.herokuapp.com/
+Demo: https://wdc-chat-app.netlify.app/
 
 ## How to develop it
 
