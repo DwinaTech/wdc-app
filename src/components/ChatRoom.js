@@ -8,8 +8,8 @@ const ChatRoom = ({ currentRoom }) => {
   const messagesRef = db.collection("messages");
   const query = messagesRef
     .where("room", "==", currentRoom)
-    .orderBy("createdAt")
-    .limit(20);
+    .orderBy("createdAt");
+  // .limit(20); you can limit the messages by uncomment this line then add you limit number default is 20
 
   const [messages] = useCollectionData(query, { idField: "id" });
   const [message, setMessage] = useState("");
